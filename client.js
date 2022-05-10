@@ -43,12 +43,37 @@ console.log( employees );
 for (let employee of employees){
   let returnValue = calculateBonus(employee)
   console.log( returnValue );
+
+if (employee.reviewRating <= 2){
+  bounusPercentage = 0;
 }
+else if(employee.reviewRating === 3){
+  bounusPercentage = 0.04;
+}
+else if( employee.reviewRating === 4){
+  bounusPercentage =0.06;
+}
+else if( employee.reviewRating === 5){
+  bounusPercentage = 0.10;
+}
+else{
+  console.log( 'uh you messed up')
+}
+
+if(employee.employeeNumber.length === 4){
+  bounusPercentage += 0.05;
+}
+}
+
 
 function calculateBonus(employee){
   console.log('in calculat bonus', employee);
+  let bounusPercentage;
   let bonusInfo = {
-    name:employee.name
-  }
+    name:employee.name,
+    bounusPercentage:bounusPercentage,
+    totalCompensation: totalCompensation,
+    totalBounus: totalBounus
+  };
   return bonusInfo;
 }
