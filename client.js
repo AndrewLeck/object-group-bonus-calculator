@@ -40,3 +40,11 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+for (let employee of employees){
+  console.log( employee);
+  calculateBonus(employee)
+}
+
+function calculateBonus(employee){
+  console.log('in calculat bonus', employee);
+}
