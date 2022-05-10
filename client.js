@@ -41,10 +41,14 @@ const employees = [
 
 console.log( employees );
 for (let employee of employees){
-  console.log( employee);
-  calculateBonus(employee)
+  let returnValue = calculateBonus(employee)
+  console.log( returnValue );
 }
 
 function calculateBonus(employee){
   console.log('in calculat bonus', employee);
+  let bonusInfo = {
+    name:employee.name
+  }
+  return bonusInfo;
 }
